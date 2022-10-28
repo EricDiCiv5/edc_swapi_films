@@ -76,5 +76,6 @@ footer article {
 }
 
 footer article > a > i {
+    color: #dcdcdc;
     font-size: 1.7vw;
 }
