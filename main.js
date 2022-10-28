@@ -4,3 +4,5 @@ const mostrar_Pelicules = async () => {
     let peliculas = await llamadaAPI.json();
     console.log(peliculas.value);
 }
+
+document.querySelector(`main`).addEventListener('DOMContentLoaded', mostrar_Pelicules);
