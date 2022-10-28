@@ -75,7 +75,6 @@ footer article {
     justify-content: space-around;
 }
 
-footer article i {
+footer article > a > i {
     font-size: 1.7vw;
 }
-
