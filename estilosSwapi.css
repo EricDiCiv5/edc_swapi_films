@@ -48,7 +48,15 @@ header h1 > span {
 }
 
 main {
-    height: 64vh;
+    height: 64.25vh;
+}
+
+main h2{
+    font-family: "StarWars2";
+    text-align: center;
+    font-size: 3vw;
+    color: #c9b823;
+    margin-top: 5vh;
 }
 
 

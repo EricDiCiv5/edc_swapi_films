@@ -1,8 +1,19 @@
+const filmsContainer = document.getElementById(`allFilms`);
+
+
 /*----FUNCIÓ PER COMUNICAR AMB API I VEURE PELICULES----*/
-const mostrar_Pelicules = async () => {
-    let llamadaAPI = await fetch("https://swapi.dev/api/films/");
-    let peliculas = await llamadaAPI.json();
-    console.log(peliculas.value);
+const mostrar_Pelicules = () => {
+    fetch("https://swapi.dev/api/films/").then(response => response.json()).then( data => {
+            console.log(data.results[0].title);
+        }
+    );
+    
 }
 
-document.querySelector(`main`).addEventListener('DOMContentLoaded', mostrar_Pelicules);
+mostrar_Pelicules();
+
+filmsContainer.addEventListener('DOMContentLoaded', () => { mostrar_Pelicules,
+console.log('DOM fully loaded and parsed')
+
+});
+
