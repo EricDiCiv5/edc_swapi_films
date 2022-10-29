@@ -9,34 +9,53 @@ let photo_id = 1;
 const mostrar_Pelicules = () => {
     fetch(api_Url).then(response => response.json()).then( data => {
             data.results.forEach(pelicula => {
+                let any = pelicula.release_date.split("-")[0];
                 filmsContainer.innerHTML += `
                 <article>
                     <h4>
                         ${pelicula.title}
                     </h4>
-                    <figure>
-                        <img src="${photo_Url}${photo_id}.jpg" alt="${pelicula.title}'s poster " />
-                    </figure>
-                    <p>
-                        ${pelicula.opening_crawl}
-                    </p>
-                    <h5>In this movie appears:</h5>
-                    <p>
-                        ${pelicula.characters.length} characters
-                    </p>
-                    <p>
-                        ${pelicula.planets.length} planets
-                    </p>
-                    <p>
-                        ${pelicula.starships.length} spaceships
-                    </p>
-                    <p>
-                        ${pelicula.vehicles.length} vehicles
-                    </p>
-                    <p>
-                        ${pelicula.species.length} species
-                    </p>
-                </article>`
+                    <section id="firstOne">
+                        <figure>
+                            <img src="${photo_Url}${photo_id}.jpg" alt="${pelicula.title}'s poster " />
+                        </figure>
+                        
+                        <p>
+                            ${pelicula.opening_crawl}
+                        </p>
+                    </section>
+                    <section id="secondOne">
+                        <div id="directorYear">
+                            <p>
+                                Director: ${pelicula.director}
+                            </p>
+                            <p>
+                                Release Year: ${any}
+                            </p>
+                        </div>
+                        <div id="stats">
+                            <h5>In this movie appears:</h5>
+                            <ul >
+                                <li>
+                                    ${pelicula.characters.length} characters
+                                </li>
+                                <li>
+                                    ${pelicula.planets.length} planets
+                                </li>
+                                <li>
+                                    ${pelicula.starships.length} spaceships
+                                </li>
+                                <li>
+                                    ${pelicula.vehicles.length} vehicles
+                                </li>
+                                <li>
+                                    ${pelicula.species.length} species
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </article>
+                `
                 photo_id++;
             });
         }
@@ -46,8 +65,11 @@ const mostrar_Pelicules = () => {
 
 mostrar_Pelicules();
 
-filmsContainer.addEventListener('DOMContentLoaded', () => { mostrar_Pelicules,
-console.log('DOM fully loaded and parsed')
+filmsContainer.addEventListener('DOMContentLoaded', mostrar_Pelicules);
 
-});
+const anar_Adalt = () => {
+    window.moveTo(0, 0);
+}
+
+document.getElementById('elevator').addEventListener('click', anar_Adalt);
 

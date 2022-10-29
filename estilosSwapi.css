@@ -1,3 +1,5 @@
+/*----GENERAL CSS STYLES----*/
+
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap');
 
 @font-face {
@@ -20,9 +22,11 @@
 html {
     background-image: url("images/starry_night.jpg");
     background-repeat: repeat-y;
-    background-size: cover;
+    background-size: 100% 100%;
     z-index: -1;
 }
+
+/*----MAIN STYLES----*/
 
 header{
     background: linear-gradient(to bottom, rgba(30,30,30,.5) 40%, rgba(30,30,30,.7) 90%);
@@ -46,6 +50,8 @@ header h1 > span {
     color: #bbb798;
 }
 
+/*----MAIN STYLES----*/
+
 main {
     height: auto;
 }
@@ -60,13 +66,101 @@ main h2{
 
 #allFilms{
     margin:auto;
-    width: 80%;
+    width: 85%;
 }
 
 #allFilms > article {
-    background-color: #999;
-    margin: 2% auto;
+    background-color: rgba(153, 153, 153, .6);
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgb(110, 122, 156);
+    margin: 3% auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: center;
 }
+
+#allFilms > article > #firstOne {
+    flex: 1;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#allFilms > article > h4 {
+    text-align: center;
+    align-self: flex-start;
+    margin: 3vh auto;
+    padding-bottom: 1vh;
+    font-family: "StarWars";
+    letter-spacing: 3px;
+    font-size: 2vw;
+}
+
+#allFilms > article > #firstOne > figure {
+    display:inline-block;
+}
+
+#allFilms > article > #firstOne > p {
+    display:inline-block;
+    text-align:justify;
+    font-family: "Space Grotesk";
+    font-size: 1.5vw;
+    line-height: 2.5;
+    width: 60%;
+    color: #c9b823;
+    text-shadow: 0px 3px 10px #000;
+}
+
+#allFilms > article > #secondOne {
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-radius: 25px;
+    width: 100%;
+    padding: 1%;
+}
+
+#allFilms > article > #secondOne > #directorYear {
+    margin-left: 8.5%;
+    line-height: 2.5;
+    text-align: center;
+    font-family: "StarWars";
+    text-shadow: 0px 0px 30px rgb(101, 117, 163);
+}
+
+#allFilms > article > #secondOne > #stats {
+    background-color: rgba(170, 170, 170, 0.4);
+    box-shadow: 0px 0px 7px #dbd498;
+    padding: 1.5%;
+    margin-right: 5%;
+}
+
+#allFilms > article > #secondOne > #stats > h5 {
+    flex: 1;
+    text-align: center;
+    font-family: 'Space Grotesk';
+    font-size: 1.5vw;
+    padding-bottom: 3vh;
+}
+
+#allFilms > article > #secondOne > #stats > ul {
+    flex: 2;
+    list-style-type: square;
+}
+
+#allFilms > article > #secondOne > #stats > ul > li{
+    margin: auto 4vw;
+    font-size: 1.1vw;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+
+
+
+/*----FOOTER STYLES----*/
 
 footer {
     background: linear-gradient(to bottom, rgba(30,30,30,.5) 40%, rgba(30,30,30,.7) 90%);
@@ -94,4 +188,20 @@ footer article {
 footer article > a > i {
     color: #dcdcdc;
     font-size: 1.7vw;
+}
+
+#elevator{
+    position:fixed;
+    top: 80vh;
+    left: 92.5vw;
+    border: 3px solid #000;
+    background-color: rgb(220, 220, 220, .5);
+    z-index: 5;
+    padding: 1vw;
+    border-radius: 50%; 
+}
+
+#elevator i{
+    color: #c9b823;
+    font-size: 2vw;
 }
