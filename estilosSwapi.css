@@ -158,8 +158,6 @@ main h2{
 }
 
 
-
-
 /*----FOOTER STYLES----*/
 
 footer {
@@ -204,4 +202,94 @@ footer article > a > i {
 #elevator i{
     color: #c9b823;
     font-size: 2vw;
+}
+
+
+/*------MEDIA QUERY 800PX------*/
+
+@media screen and (max-width: 800px) {
+    header{
+        padding: 3%;
+    }
+    
+    header h1{
+        font-size: 6vw;
+        width: 40%;
+    }
+
+    header h1 > span {
+        font-size: 3vw;
+    }
+
+    main h2{
+        font-size: 4vw;
+        color: #c9b823;
+        margin-top: 5vh;
+    }
+
+    #allFilms > article > h4 {
+        font-size: 3vw;
+        margin: 4.5vh auto;
+    }
+    
+    #allFilms > article > #firstOne > figure {
+        display:block;
+        width: 75%;
+    }
+
+    #allFilms > article > #firstOne > figure > img {
+        width: 100%;
+    }
+    
+    #allFilms > article > #firstOne > p {
+        font-size: 2vw;
+        line-height: 3;
+        width: 75%;
+    }
+
+    #allFilms > article > #secondOne > #stats {
+        background-color: rgba(170, 170, 170, 0.4);
+        box-shadow: 0px 0px 7px #dbd498;
+        padding: 1.5%;
+        margin-right: 5%;
+    }
+    
+    #allFilms > article > #secondOne > #stats > h5 {
+        font-size: 2.5vw;
+        padding-bottom: 3vh;
+    }
+    
+    #allFilms > article > #secondOne > #stats > ul {
+        list-style-type: square;
+    }
+    
+    #allFilms > article > #secondOne > #stats > ul > li{
+        margin: auto 4vw;
+        font-size: 1.6vw;
+    }
+
+    #allFilms > article > #secondOne {
+        border-radius: 25px;
+        width: 100%;
+        padding: 1%;
+        margin: 4vh auto;
+    }
+
+    footer {
+        padding: 3%;
+        font-size: 1.75vw;
+    }
+    
+    footer article {
+        flex: 1;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+    
+    footer article > a > i {
+        color: #dcdcdc;
+        font-size: 2.5vw;
+    }
+
 }
