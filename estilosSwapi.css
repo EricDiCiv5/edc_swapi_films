@@ -293,3 +293,108 @@ footer article > a > i {
     }
 
 }
+
+@media screen and (max-width: 420px) {
+    header{
+        padding: 5%;
+    }
+    
+    header h1{
+        font-size: 8vw;
+        width: 60%;
+    }
+
+    header h1 > span {
+        font-size: 4vw;
+    }
+
+    main h2{
+        font-size: 5vw;
+        color: #c9b823;
+        margin: 4vh auto 3.5vh;
+    }
+
+    #allFilms{
+        margin:auto;
+        width: 80%;
+    }
+
+    #allFilms > article > h4 {
+        font-size: 4.5vw;
+        margin: 3.5vh auto;
+    }
+    
+    #allFilms > article > #firstOne > figure {
+        display:block;
+        width: 85%;
+    }
+
+    #allFilms > article > #firstOne > figure > img {
+        width: 100%;
+    }
+    
+    #allFilms > article > #firstOne > p {
+        font-size: 3vw;
+        line-height: 3.5;
+        width: 85%;
+    }
+
+    #allFilms > article > #secondOne {
+        display:flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        border-radius: 25px;
+        width: 100%;
+        padding: 1%;
+        margin: 2vh auto;
+    }
+    
+    #allFilms > article > #secondOne > #directorYear {
+        margin: 1vh auto 3.5vh;
+        line-height: 2.5;
+    }
+
+    #allFilms > article > #secondOne > #stats {
+        padding: 3.5%;
+        margin: auto;
+    }
+    
+    #allFilms > article > #secondOne > #stats > h5 {
+        font-size: 3.5vw;
+        padding-bottom: 3vh;
+    }
+    
+    #allFilms > article > #secondOne > #stats > ul {
+        list-style-type: square;
+    }
+    
+    #allFilms > article > #secondOne > #stats > ul > li{
+        margin: auto 4vw;
+        font-size: 3.2vw;
+    }
+
+    #allFilms > article > #secondOne {
+        border-radius: 25px;
+        width: 100%;
+        padding: 1%;
+        margin: 4vh auto;
+    }
+
+    footer {
+        padding: 3%;
+        font-size: 1.75vw;
+    }
+    
+    footer article {
+        flex: 1;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+    
+    footer article > a > i {
+        color: #dcdcdc;
+        font-size: 2.5vw;
+    }
+}
